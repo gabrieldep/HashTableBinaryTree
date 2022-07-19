@@ -25,3 +25,8 @@ void TipoNo::SetEmail(Email email)
 {
 	this->email = &email;
 }
+
+Email* TipoNo::GetEmail()
+{
+	return this->email;
+}

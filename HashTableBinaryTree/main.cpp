@@ -68,10 +68,13 @@ int main() {
 			string a = "";
 		}
 		else if (line[0] == 'C') {
-			GetIndicesConsulta(line);
+			int* valores = GetIndicesConsulta(line);
+			cout << hash->Pesquisa(valores[0])->Pesquisa(valores[1])->GetEmail()->GetMessage() << endl;
 		}
-		else
-			break;
+		else {
+			int* valores = GetIndicesConsulta(line);
+			hash->Pesquisa(valores[0])->Remove(valores[1]);
+		}
 	}
 	myfile.close();
 }

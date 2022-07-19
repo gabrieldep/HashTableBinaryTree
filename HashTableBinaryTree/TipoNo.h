@@ -9,6 +9,7 @@ public:
 	TipoNo(Email e);
 	~TipoNo();
 	void SetEmail(Email email);
+	Email* GetEmail();
 private:
 	Email* email;
 	TipoNo* esq;
