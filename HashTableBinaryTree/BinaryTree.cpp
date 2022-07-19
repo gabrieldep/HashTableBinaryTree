@@ -64,7 +64,7 @@ void BinaryTree::InsereRecursivo(TipoNo*& p, TipoItemArvore item)
 		p->SetMessage(item.GetMessage());
 	}
 	else {
-		if (item.GetId() < p->GetId())
+		if (item.GetId() < p->email.GetE())
 			InsereRecursivo(p->esq, item);
 		else
 			InsereRecursivo(p->dir, item);
@@ -85,9 +85,9 @@ TipoNo* BinaryTree::PesquisaRecursiva(TipoNo*& p, int chave)
 		aux->SetMessage("");
 		return aux;
 	}
-	if (chave < p->GetId())
+	if (chave < p->email.GetE())
 		return PesquisaRecursiva(p->esq, chave);
-	else if (p->GetId() < chave)
+	else if (p->email.GetE() < chave)
 		return PesquisaRecursiva(p->dir, chave);
 	else
 		return p;
@@ -102,9 +102,9 @@ void BinaryTree::RemoveRecursiva(TipoNo*& p, int chave)
 {
 	if (p == nullptr)
 		return;
-	if (chave < p->GetId())
+	if (chave < p->email.GetE())
 		RemoveRecursiva(p->esq, chave);
-	else if (p->GetId() < chave)
+	else if (p->email.GetE() < chave)
 		RemoveRecursiva(p->dir, chave);
 	else {
 		if (p->esq == nullptr)
@@ -140,7 +140,7 @@ void BinaryTree::Antecessor(TipoNo* q, TipoNo*& r)
 		Antecessor(q, r->dir);
 		return;
 	}
-	q->message = r->message;
+	q->email.GetMessage() = r->email.GetMessage();
 	q = r;
 	r = r->esq;
 	free(q);

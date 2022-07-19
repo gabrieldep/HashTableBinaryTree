@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="Email.cpp" />
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TipoItemArvore.cpp" />
@@ -148,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="Email.h" />
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="TipoItemArvore.h" />
     <ClInclude Include="TipoNo.h" />

@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Email.h"
 class TipoNo
 {
 public:
@@ -7,13 +8,10 @@ public:
 	~TipoNo();
 	void SetMessage(std::string nome);
 	void SetId(int valor);
-	std::string GetMessage();
-	int GetId();
 private:
-	int id;
+	Email email;
 	TipoNo* esq;
 	TipoNo* dir;
-	std::string message;
 	friend class BinaryTree;
 };
 

@@ -33,6 +33,9 @@
     <ClCompile Include="TipoItemArvore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Email.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HashTable.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TipoItemArvore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Email.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
