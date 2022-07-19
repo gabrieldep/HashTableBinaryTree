@@ -49,7 +49,9 @@ int main() {
 	while (getline(myfile, line)) {
 		if (line[0] == 'E') {
 			Email* email = GetEmailFromString(line, m);
-			hash->InsereEmail(email);
+			BinaryTree* arvore = hash->Pesquisa(email->GetN());
+			arvore->Insere(*email);
+			string a = "";
 		}
 		else if (line[0] == 'C')
 			break;

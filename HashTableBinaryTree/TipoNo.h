@@ -8,6 +8,7 @@ public:
 	TipoNo(int e);
 	TipoNo(Email e);
 	~TipoNo();
+	void SetEmail(Email email);
 private:
 	Email* email;
 	TipoNo* esq;

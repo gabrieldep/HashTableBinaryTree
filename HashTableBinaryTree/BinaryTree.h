@@ -13,7 +13,7 @@ public:
 	void Limpa();
 
 private:
-	void InsereRecursivo(TipoNo* p, Email item);
+	void InsereRecursivo(TipoNo*& p, Email item);
 	TipoNo* PesquisaRecursiva(TipoNo*& p, int chave);
 	void RemoveRecursiva(TipoNo*& p, int chave);
 	void ApagaRecursivo(TipoNo* p);

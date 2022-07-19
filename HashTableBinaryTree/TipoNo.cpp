@@ -13,10 +13,15 @@ TipoNo::TipoNo(int e)
 
 TipoNo::TipoNo(Email e)
 {
-	this->email = &e;
+	this->email = new Email(e);
 }
 
 TipoNo::~TipoNo()
 {
 	delete email;
+}
+
+void TipoNo::SetEmail(Email email)
+{
+	this->email = &email;
 }

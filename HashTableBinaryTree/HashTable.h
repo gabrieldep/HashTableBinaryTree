@@ -4,14 +4,13 @@
 class HashTable
 {
 private:
-	BinaryTree* arvore;
+	BinaryTree** arvore;
 	int tamanho;
 public:
-	HashTable();
 	HashTable(int tamanho);
 	~HashTable();
-	void InsereEmail(Email* email);
-	void RemoveEmail(Email* email);
-	Email PesquisaEmail(Email* email);
+	void Insere(BinaryTree* tree);
+	void Remove(BinaryTree* tree);
+	BinaryTree* Pesquisa(int id);
 	void Limpa();
 };

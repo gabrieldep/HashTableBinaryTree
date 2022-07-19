@@ -1,30 +1,29 @@
 #include "HashTable.h"
 
-HashTable::HashTable()
-{
-}
-
 HashTable::HashTable(int tamanho)
 {
 	this->tamanho = tamanho;
+	this->arvore = (BinaryTree**)malloc(tamanho * sizeof(BinaryTree*));
+	for (size_t i = 0; i < tamanho; i++)
+		this->arvore[i] = new BinaryTree();
 }
 
 HashTable::~HashTable()
 {
 }
 
-void HashTable::InsereEmail(Email* email)
+void HashTable::Insere(BinaryTree* tree)
 {
-	arvore->Insere(*email);
+
 }
 
-void HashTable::RemoveEmail(Email* email)
+void HashTable::Remove(BinaryTree* email)
 {
 }
 
-Email HashTable::PesquisaEmail(Email* email)
+BinaryTree* HashTable::Pesquisa(int id)
 {
-	return *email;;
+	return arvore[id];
 }
 
 void HashTable::Limpa()
