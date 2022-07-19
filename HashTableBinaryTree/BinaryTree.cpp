@@ -56,11 +56,10 @@ void BinaryTree::Limpa()
 /// </summary>
 /// <param name="p">N� atual a ser verificado.</param>
 /// <param name="item">Item a ser adicionado.</param>
-void BinaryTree::InsereRecursivo(TipoNo*& p, Email item)
+void BinaryTree::InsereRecursivo(TipoNo* p, Email item)
 {
 	if (p == nullptr) {
-		p = new TipoNo(item.GetE());
-		p->email->SetMessage(item.GetMessage());
+		p = new TipoNo(item);
 	}
 	else {
 		if (item.GetE() < p->email->GetE())

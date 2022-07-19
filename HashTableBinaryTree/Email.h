@@ -12,6 +12,7 @@ private:
 public:
 	Email(int e, int u, int n, string message);
 	Email(int e);
+	Email();
 	~Email();
 	void SetE(int e);
 	void SetN(int n);

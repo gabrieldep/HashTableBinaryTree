@@ -11,6 +11,11 @@ TipoNo::TipoNo(int e)
 	this->email = new Email(e);
 }
 
+TipoNo::TipoNo(Email e)
+{
+	this->email = &e;
+}
+
 TipoNo::~TipoNo()
 {
 	delete email;

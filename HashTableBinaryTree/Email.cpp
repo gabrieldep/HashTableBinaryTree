@@ -13,6 +13,14 @@ Email::Email(int e)
 	this->e = e;
 }
 
+Email::Email()
+{
+	this->e = -1;
+	this->u = -1;
+	this->n = -1;
+	this->message = "";
+}
+
 Email::~Email()
 {
 }

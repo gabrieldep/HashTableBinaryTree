@@ -6,6 +6,7 @@ class TipoNo
 public:
 	TipoNo(int e, int n, int u, string message);
 	TipoNo(int e);
+	TipoNo(Email e);
 	~TipoNo();
 private:
 	Email* email;
