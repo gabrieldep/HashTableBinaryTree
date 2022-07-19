@@ -1,39 +1,17 @@
 #include "TipoNo.h"
 #include <iostream>
 
-TipoNo::TipoNo()
+TipoNo::TipoNo(int e, int n, int u, string message)
 {
-	this->message = "";
+	email = new Email(e, u, n, message);
+}
+
+TipoNo::TipoNo(int e)
+{
+	this->email = new Email(e);
 }
 
 TipoNo::~TipoNo()
 {
-}
-
-/// <summary>
-/// Define o valor do nome
-/// </summary>
-/// <param name="nome">Valor a ser atribuido</param>
-void TipoNo::SetMessage(std::string nome)
-{
-	this->message = nome;
-}
-
-void TipoNo::SetId(int valor)
-{
-	this->id = valor;
-}
-
-/// <summary>
-/// Retorna o nome
-/// </summary>
-/// <returns></returns>
-std::string TipoNo::GetMessage()
-{
-	return this->message;
-}
-
-int TipoNo::GetId()
-{
-	return this->id;
+	delete email;
 }

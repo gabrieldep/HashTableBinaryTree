@@ -8,6 +8,11 @@ Email::Email(int e, int u, int n, string message)
 	this->message = message;
 }
 
+Email::Email(int e)
+{
+	this->e = e;
+}
+
 Email::~Email()
 {
 }
@@ -45,4 +50,9 @@ int Email::GetN()
 int Email::GetU()
 {
 	return this->u;
+}
+
+string Email::GetMessage()
+{
+	return this->message;
 }

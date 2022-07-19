@@ -4,12 +4,11 @@
 class TipoNo
 {
 public:
-	TipoNo();
+	TipoNo(int e, int n, int u, string message);
+	TipoNo(int e);
 	~TipoNo();
-	void SetMessage(std::string nome);
-	void SetId(int valor);
 private:
-	Email email;
+	Email* email;
 	TipoNo* esq;
 	TipoNo* dir;
 	friend class BinaryTree;
