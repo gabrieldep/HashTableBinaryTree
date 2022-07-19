@@ -12,7 +12,7 @@ Email* GetEmailFromString(string message, int m) {
 	string delimiter = " ";
 	size_t pos = 0;
 	int aux = 0;
-	while ((pos = message.find(delimiter)) != std::string::npos)
+	while (true)
 	{
 		if (aux == 4) {
 			string texto = message.substr(0, message.size());
@@ -30,16 +30,30 @@ Email* GetEmailFromString(string message, int m) {
 			}
 			aux++;
 		}
-
+		if ((pos = message.find(delimiter)) == std::string::npos)
+			break;
 	}
 	return email;
+}
+
+int* GetIndicesConsulta(string message) {
+	int* valores = new int[2];
+	string delimiter = " ";
+	message.erase(0, message.find(delimiter) + delimiter.length());
+	string palavra = message.substr(0, message.find(delimiter));
+	message.erase(0, message.find(delimiter) + delimiter.length());
+	valores[0] = stoi(palavra);
+
+	palavra = message.substr(0, message.find(delimiter));
+	message.erase(0, message.find(delimiter) + delimiter.length());
+	valores[1] = stoi(palavra);
+	return valores;
 }
 
 int main() {
 	string line;
 	ifstream myfile;
-
-	int u, e, n, m;
+	int u = 0, e = 0, n = 0, m = 0;
 
 	myfile.open("entrada_1.txt");
 	myfile >> m;
@@ -53,8 +67,9 @@ int main() {
 			arvore->Insere(*email);
 			string a = "";
 		}
-		else if (line[0] == 'C')
-			break;
+		else if (line[0] == 'C') {
+			GetIndicesConsulta(line);
+		}
 		else
 			break;
 	}
