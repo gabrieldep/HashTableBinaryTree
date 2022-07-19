@@ -143,7 +143,6 @@
     <ClCompile Include="Email.cpp" />
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TipoItemArvore.cpp" />
     <ClCompile Include="TipoNo.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
@@ -151,7 +150,6 @@
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Email.h" />
     <ClInclude Include="HashTable.h" />
-    <ClInclude Include="TipoItemArvore.h" />
     <ClInclude Include="TipoNo.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

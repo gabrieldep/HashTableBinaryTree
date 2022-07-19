@@ -1,5 +1,4 @@
 ﻿#include "BinaryTree.h"
-#include "TipoItemArvore.h"
 #include "Utils.h"
 #include <iostream>
 
@@ -19,9 +18,9 @@ BinaryTree::~BinaryTree()
 /// Insere um elemento na ArvoreBinaria
 /// </summary>
 /// <param name="tipoItem">Item a ser adicionado</param>
-void BinaryTree::Insere(TipoItemArvore tipoItem)
+void BinaryTree::Insere(Email email)
 {
-	InsereRecursivo(raiz, tipoItem);
+	InsereRecursivo(raiz, email);
 }
 
 /// <summary>
@@ -57,14 +56,14 @@ void BinaryTree::Limpa()
 /// </summary>
 /// <param name="p">N� atual a ser verificado.</param>
 /// <param name="item">Item a ser adicionado.</param>
-void BinaryTree::InsereRecursivo(TipoNo*& p, TipoItemArvore item)
+void BinaryTree::InsereRecursivo(TipoNo*& p, Email item)
 {
 	if (p == nullptr) {
-		p = new TipoNo(item.GetEmail()->GetE());
-		p->email->SetMessage(item.GetEmail()->GetMessage());
+		p = new TipoNo(item.GetE());
+		p->email->SetMessage(item.GetMessage());
 	}
 	else {
-		if (item.GetEmail()->GetE() < p->email->GetE())
+		if (item.GetE() < p->email->GetE())
 			InsereRecursivo(p->esq, item);
 		else
 			InsereRecursivo(p->dir, item);
