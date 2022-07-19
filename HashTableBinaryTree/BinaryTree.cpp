@@ -60,11 +60,11 @@ void BinaryTree::Limpa()
 void BinaryTree::InsereRecursivo(TipoNo*& p, TipoItemArvore item)
 {
 	if (p == nullptr) {
-		p = new TipoNo(item.GetId());
-		p->email->SetMessage(item.GetMessage());
+		p = new TipoNo(item.GetEmail()->GetE());
+		p->email->SetMessage(item.GetEmail()->GetMessage());
 	}
 	else {
-		if (item.GetId() < p->email->GetE())
+		if (item.GetEmail()->GetE() < p->email->GetE())
 			InsereRecursivo(p->esq, item);
 		else
 			InsereRecursivo(p->dir, item);

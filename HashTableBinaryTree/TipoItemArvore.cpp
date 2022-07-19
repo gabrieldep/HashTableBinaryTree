@@ -1,33 +1,26 @@
 #include "TipoItemArvore.h"
 
+TipoItemArvore::TipoItemArvore(Email* email)
+{
+	this->email = email;
+}
+
 TipoItemArvore::TipoItemArvore()
 {
-	this->id = -1;
-	this->message = "";
+	delete this->email;
 }
 
-TipoItemArvore::TipoItemArvore(std::string nome, int id)
+TipoItemArvore::~TipoItemArvore()
 {
-	this->message = nome;
-	this->id = id;
+	delete email;
 }
 
-void TipoItemArvore::SetMessage(std::string valor)
+void TipoItemArvore::SetEmail(Email* email)
 {
-	this->message = valor;
+	this->email = email;
 }
 
-void TipoItemArvore::SetId(int valor)
+Email* TipoItemArvore::GetEmail()
 {
-	this->id = valor;
-}
-
-std::string TipoItemArvore::GetMessage()
-{
-	return this->message;
-}
-
-int TipoItemArvore::GetId()
-{
-	return this->id;
+	return this->email;
 }
