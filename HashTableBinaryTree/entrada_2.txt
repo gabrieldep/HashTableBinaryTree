@@ -1,0 +1,9 @@
+2
+ENTREGA 3 111 4 Olá Professor, tudo bem?
+ENTREGA 4 112 8 Boa noite! Tudo bem. Como posso te ajudar?
+ENTREGA 3 113 12 Gostaria de entender melhor a nota do minha segunda prova, por favor.
+ENTREGA 4 114 14 Certo, passe na minha sala na quinta-feira às 9 horas que vamos discutir juntos.
+ENTREGA 3 115 1 Obrigado!
+CONSULTA 4 114
+CONSULTA 4 115
+CONSULTA 3 115

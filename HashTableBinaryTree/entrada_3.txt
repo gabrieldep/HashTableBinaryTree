@@ -1,0 +1,9 @@
+1
+ENTREGA 1 116 14 Boa tarde José! Amanhã preciso que você busque uma encomenda na filial da Pampulha.
+ENTREGA 2 117 9 Boa tarde Antônio! Certo, qual o endereço da loja?
+ENTREGA 1 118 10 Avenida Antônio Carlos, 1000. Chegar lá e procurar por Flávio.
+ENTREGA 2 119 5 Ok, estarei lá às 8h.
+ENTREGA 1 120 1 Obrigado.
+CONSULTA 1 116
+CONSULTA 1 117
+CONSULTA 2 117

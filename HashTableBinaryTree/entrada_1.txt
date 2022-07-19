@@ -1,0 +1,15 @@
+23
+ENTREGA 5 103 6 Bom dia, meu amigo! Tudo bom?
+ENTREGA 6 104 8 Boa tarde, minha amiga! Vou bem e você?
+ENTREGA 5 105 18 Também! Não estou encontrando meu casaco, será que o deixei na sua casa no fim de semana passado?
+ENTREGA 6 106 8 É um casaco longo e vermelho com bolsos?
+ENTREGA 5 107 3 Sim, este mesmo.
+ENTREGA 6 108 6 Está aqui, vou guardá-lo para você.
+ENTREGA 5 109 8 Obrigada! Vou buscá-lo no próximo sábado. Até lá!
+ENTREGA 6 110 1 Até!
+CONSULTA 5 103
+CONSULTA 6 104
+CONSULTA 5 107
+APAGA 5 103
+CONSULTA 5 103
+CONSULTA 6 110

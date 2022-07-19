@@ -1,0 +1,19 @@
+5
+ENTREGA 5 121 10 Temos um presente para você! Clique aqui para saber mais.
+ENTREGA 5 122 10 Aqui está a fatura digital do seu cartão de crédito.
+ENTREGA 4 123 6 Nova mensagem no fórum do Moodle.
+CONSULTA 5 121
+CONSULTA 5 122
+CONSULTA 4 123
+APAGA 5 121
+CONSULTA 5 121
+CONSULTA 5 122
+CONSULTA 4 123
+APAGA 5 122
+CONSULTA 5 121
+CONSULTA 5 122
+CONSULTA 4 123
+APAGA 5 123
+CONSULTA 5 121
+CONSULTA 5 122
+CONSULTA 4 123
