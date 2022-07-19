@@ -1,19 +1,19 @@
 #pragma once
-#include "TipoItem.h"
 #include <string>
 class TipoNo
 {
 public:
 	TipoNo();
 	~TipoNo();
-	void SetNome(std::string nome);
-	std::string GetNome();
-	void ImprimeNome();
-	void ImprimeDados();
+	void SetMessage(std::string nome);
+	void SetId(int valor);
+	std::string GetMessage();
+	int GetId();
 private:
-	std::string nome;
+	int id;
 	TipoNo* esq;
 	TipoNo* dir;
-	friend class ArvoreBinaria;
+	std::string message;
+	friend class BinaryTree;
 };
 

@@ -29,26 +29,18 @@ void BinaryTree::Insere(TipoItemArvore tipoItem)
 /// </summary>
 /// <param name="nome">Chave com o nome a ser procurado na arvore binaria</param>
 /// <returns></returns>
-TipoNo* BinaryTree::Pesquisa(std::string nome)
+TipoNo* BinaryTree::Pesquisa(int chave)
 {
-	return PesquisaRecursiva(raiz, nome);
+	return PesquisaRecursiva(raiz, chave);
 }
 
 /// <summary>
 /// Remove o elemento com a chave recebida da arvore binaria.
 /// </summary>
 /// <param name="nome">Chave com o nome do elemento a ser removido da arvore.</param>
-void BinaryTree::Remove(std::string nome)
+void BinaryTree::Remove(int chave)
 {
-	RemoveRecursiva(raiz, nome);
-}
-
-/// <summary>
-/// Imprime a arvore binaria em uma unica linha em ordem alfabetica.
-/// </summary>
-void BinaryTree::Imprime()
-{
-	InOrdem(raiz);
+	RemoveRecursiva(raiz, chave);
 }
 
 /// <summary>
@@ -69,20 +61,10 @@ void BinaryTree::InsereRecursivo(TipoNo*& p, TipoItemArvore item)
 {
 	if (p == nullptr) {
 		p = new TipoNo();
-		p->SetNome(item.GetNome());
-
-		TipoCelula celula = TipoCelula();
-		celula.SetDados(item.GetDados());
-
-		p->dadosBinarios->Enfileira(celula);
+		p->SetMessage(item.GetMessage());
 	}
 	else {
-		if (item.GetNome() == p->GetNome()) {
-			TipoCelula celula = TipoCelula();
-			celula.SetDados(item.GetDados());
-			p->dadosBinarios->Enfileira(celula);
-		}
-		else if (VemAntes(item.GetNome(), p->GetNome()))
+		if (item.GetId() < p->GetId())
 			InsereRecursivo(p->esq, item);
 		else
 			InsereRecursivo(p->dir, item);
@@ -95,17 +77,17 @@ void BinaryTree::InsereRecursivo(TipoNo*& p, TipoItemArvore item)
 /// <param name="p">N� atual a ser verificado</param>
 /// <param name="chave">Chave para encontrar o elemento.</param>
 /// <returns>TipoNo correspondente a chave recebida</returns>
-TipoNo* BinaryTree::PesquisaRecursiva(TipoNo*& p, std::string chave)
+TipoNo* BinaryTree::PesquisaRecursiva(TipoNo*& p, int chave)
 {
 	TipoNo* aux = new TipoNo();
 
 	if (p == nullptr) {
-		aux->SetNome("404");
+		aux->SetMessage("");
 		return aux;
 	}
-	if (VemAntes(chave, p->GetNome()))
+	if (chave < p->GetId())
 		return PesquisaRecursiva(p->esq, chave);
-	else if (VemAntes(p->GetNome(), chave))
+	else if (p->GetId() < chave)
 		return PesquisaRecursiva(p->dir, chave);
 	else
 		return p;
@@ -116,13 +98,13 @@ TipoNo* BinaryTree::PesquisaRecursiva(TipoNo*& p, std::string chave)
 /// </summary>
 /// <param name="p">N� atual a ser verificado</param>
 /// <param name="chave">Chave para encontrar o elemento a ser removido.</param>
-void BinaryTree::RemoveRecursiva(TipoNo*& p, std::string chave)
+void BinaryTree::RemoveRecursiva(TipoNo*& p, int chave)
 {
 	if (p == nullptr)
 		return;
-	if (VemAntes(chave, p->GetNome()))
+	if (chave < p->GetId())
 		RemoveRecursiva(p->esq, chave);
-	else if (VemAntes(p->GetNome(), chave))
+	else if (p->GetId() < chave)
 		RemoveRecursiva(p->dir, chave);
 	else {
 		if (p->esq == nullptr)
@@ -148,19 +130,6 @@ void BinaryTree::ApagaRecursivo(TipoNo* p)
 }
 
 /// <summary>
-/// Metodo que imprime elementos em ordem.
-/// </summary>
-/// <param name="p">N� atual para ser impresso e procurar filhos.</param>
-void BinaryTree::InOrdem(TipoNo* p)
-{
-	if (p != nullptr) {
-		InOrdem(p->esq);
-		p->ImprimeNome();
-		InOrdem(p->dir);
-	}
-}
-
-/// <summary>
 /// M�todo que reconstroi a arvore caso algum elemento seja retirado.
 /// </summary>
 /// <param name="q">Elemento removido</param>
@@ -171,8 +140,7 @@ void BinaryTree::Antecessor(TipoNo* q, TipoNo*& r)
 		Antecessor(q, r->dir);
 		return;
 	}
-	q->nome = r->nome;
-	q->dadosBinarios = r->dadosBinarios;
+	q->message = r->message;
 	q = r;
 	r = r->esq;
 	free(q);

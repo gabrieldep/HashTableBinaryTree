@@ -3,44 +3,37 @@
 
 TipoNo::TipoNo()
 {
-	this->nome = "";
+	this->message = "";
 }
 
 TipoNo::~TipoNo()
 {
-	//delete this->dadosBinarios;
 }
 
 /// <summary>
 /// Define o valor do nome
 /// </summary>
 /// <param name="nome">Valor a ser atribuido</param>
-void TipoNo::SetNome(std::string nome)
+void TipoNo::SetMessage(std::string nome)
 {
-	this->nome = nome;
+	this->message = nome;
+}
+
+void TipoNo::SetId(int valor)
+{
+	this->id = valor;
 }
 
 /// <summary>
 /// Retorna o nome
 /// </summary>
 /// <returns></returns>
-std::string TipoNo::GetNome()
+std::string TipoNo::GetMessage()
 {
-	return this->nome;
+	return this->message;
 }
 
-/// <summary>
-/// Imprime o nome na saida padrão
-/// </summary>
-void TipoNo::ImprimeNome()
+int TipoNo::GetId()
 {
-	std::cout << this->nome << " ";
-}
-
-/// <summary>
-/// Imprime os dados na saida padrão
-/// </summary>
-void TipoNo::ImprimeDados()
-{
-	//dadosBinarios->Imprime();
+	return this->id;
 }

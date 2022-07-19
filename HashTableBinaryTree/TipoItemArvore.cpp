@@ -1,76 +1,33 @@
 #include "TipoItemArvore.h"
-#include <iostream>
 
 TipoItemArvore::TipoItemArvore()
 {
-    this->dados = "";
-    this->nome = "";
+	this->id = -1;
+	this->message = "";
 }
 
-TipoItemArvore::TipoItemArvore(std::string dados, std::string nome)
+TipoItemArvore::TipoItemArvore(std::string nome, int id)
 {
-    this->dados = dados;
-    this->nome = nome;
+	this->message = nome;
+	this->id = id;
 }
 
-/// <summary>
-/// Define o valor dos dados
-/// </summary>
-/// <param name="valor">Valor a ser atribuido</param>
-void TipoItemArvore::SetDados(std::string valor)
+void TipoItemArvore::SetMessage(std::string valor)
 {
-    this->dados = valor;
+	this->message = valor;
 }
 
-/// <summary>
-/// Define o valor dos dados
-/// </summary>
-/// <param name="valor">Valor a ser atribuido</param>
-void TipoItemArvore::SetDadosInt(int valor)
+void TipoItemArvore::SetId(int valor)
 {
-    this->dadosInt = valor;
+	this->id = valor;
 }
 
-/// <summary>
-/// Define o valor do nome
-/// </summary>
-/// <param name="valor">Valor a ser atribuido</param>
-void TipoItemArvore::SetNome(std::string valor)
+std::string TipoItemArvore::GetMessage()
 {
-    this->nome = valor;
+	return this->message;
 }
 
-/// <summary>
-/// Retorna o valor dos dados
-/// </summary>
-/// <returns></returns>
-std::string TipoItemArvore::GetDados()
+int TipoItemArvore::GetId()
 {
-    return this->dados;
-}
-
-/// <summary>
-/// Retorna o valor dos dados
-/// </summary>
-/// <returns></returns>
-int TipoItemArvore::GetDadosInt()
-{
-    return this->dadosInt;
-}
-
-/// <summary>
-/// Retorna o valor do nome
-/// </summary>
-/// <returns></returns>
-std::string TipoItemArvore::GetNome()
-{
-    return this->nome;
-}
-
-/// <summary>
-/// Imprime os dados e o nome
-/// </summary>
-void TipoItemArvore::Imprime()
-{
-    std::cout << this->nome << " " << this->dados << std::endl;
+	return this->id;
 }

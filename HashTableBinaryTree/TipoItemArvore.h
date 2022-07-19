@@ -4,17 +4,12 @@ class TipoItemArvore
 {
 public:
 	TipoItemArvore();
-	TipoItemArvore(std::string dados, std::string nome);
-	void SetDados(std::string valor);
-	void SetDadosInt(int valor);
-	void SetNome(std::string valor);
-	std::string GetDados();
-	int GetDadosInt();
-	std::string GetNome();
-	void Imprime();
+	TipoItemArvore(std::string nome, int id);
+	void SetMessage(std::string valor);
+	void SetId(int valor);
+	std::string GetMessage();
+	int GetId();
 private:
-	std::string dados;
-	std::string nome;
-	int dadosInt;
+	int id;
+	std::string message;
 };
-

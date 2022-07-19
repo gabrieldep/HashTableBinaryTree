@@ -141,8 +141,7 @@
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="HashTable.cpp" />
-    <ClCompile Include="HashTableBinaryTree.cpp" />
-    <ClCompile Include="TipoItem.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="TipoItemArvore.cpp" />
     <ClCompile Include="TipoNo.cpp" />
     <ClCompile Include="Utils.cpp" />
@@ -150,7 +149,6 @@
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="HashTable.h" />
-    <ClInclude Include="TipoItem.h" />
     <ClInclude Include="TipoItemArvore.h" />
     <ClInclude Include="TipoNo.h" />
     <ClInclude Include="Utils.h" />

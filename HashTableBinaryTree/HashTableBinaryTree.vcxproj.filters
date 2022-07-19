@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HashTableBinaryTree.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HashTable.cpp">
@@ -24,16 +24,13 @@
     <ClCompile Include="BinaryTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TipoItemArvore.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TipoNo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TipoItem.cpp">
+    <ClCompile Include="Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Utils.cpp">
+    <ClCompile Include="TipoItemArvore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,16 +41,13 @@
     <ClInclude Include="BinaryTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TipoItemArvore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TipoNo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TipoItem.h">
+    <ClInclude Include="Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Utils.h">
+    <ClInclude Include="TipoItemArvore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
