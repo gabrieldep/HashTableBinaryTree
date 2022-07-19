@@ -15,8 +15,7 @@ HashTable::~HashTable()
 
 void HashTable::InsereEmail(Email* email)
 {
-	TipoItemArvore* tipoItem = new TipoItemArvore(email);
-	arvore->Insere(*tipoItem);
+	arvore->Insere(*email);
 }
 
 void HashTable::RemoveEmail(Email* email)

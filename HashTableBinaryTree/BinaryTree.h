@@ -1,6 +1,5 @@
 #pragma once
 #include "TipoNo.h"
-#include "TipoItemArvore.h"
 
 class BinaryTree
 {
@@ -8,13 +7,13 @@ public:
 	BinaryTree();
 	~BinaryTree();
 
-	void Insere(TipoItemArvore tipoItem);
+	void Insere(Email tipoItem);
 	TipoNo* Pesquisa(int chave);
 	void Remove(int chave);
 	void Limpa();
 
 private:
-	void InsereRecursivo(TipoNo*& p, TipoItemArvore item);
+	void InsereRecursivo(TipoNo*& p, Email item);
 	TipoNo* PesquisaRecursiva(TipoNo*& p, int chave);
 	void RemoveRecursiva(TipoNo*& p, int chave);
 	void ApagaRecursivo(TipoNo* p);
