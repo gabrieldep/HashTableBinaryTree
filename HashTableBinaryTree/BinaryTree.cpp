@@ -37,9 +37,9 @@ TipoNo* BinaryTree::Pesquisa(int chave)
 /// Remove o elemento com a chave recebida da arvore binaria.
 /// </summary>
 /// <param name="nome">Chave com o nome do elemento a ser removido da arvore.</param>
-void BinaryTree::Remove(int chave)
+bool BinaryTree::Remove(int chave)
 {
-	RemoveRecursiva(raiz, chave);
+	return RemoveRecursiva(raiz, chave);
 }
 
 /// <summary>
@@ -96,10 +96,10 @@ TipoNo* BinaryTree::PesquisaRecursiva(TipoNo*& p, int chave)
 /// </summary>
 /// <param name="p">N� atual a ser verificado</param>
 /// <param name="chave">Chave para encontrar o elemento a ser removido.</param>
-void BinaryTree::RemoveRecursiva(TipoNo*& p, int chave)
+bool BinaryTree::RemoveRecursiva(TipoNo*& p, int chave)
 {
 	if (p == nullptr)
-		return;
+		return false;
 	if (chave < p->email->GetE())
 		RemoveRecursiva(p->esq, chave);
 	else if (p->email->GetE() < chave)
@@ -111,6 +111,7 @@ void BinaryTree::RemoveRecursiva(TipoNo*& p, int chave)
 			p = p->esq;
 		else
 			Antecessor(p, p->esq);
+		return true;
 	}
 }
 

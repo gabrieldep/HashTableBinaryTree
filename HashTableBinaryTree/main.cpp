@@ -75,7 +75,10 @@ int main(int argc, char** argv) {
 		}
 		else {
 			int* valores = GetIndicesConsulta(line);
-			hash->Pesquisa(valores[0] % m)->Remove(valores[1]);
+			if (hash->Pesquisa(valores[0] % m)->Remove(valores[1]))
+				cout << "OK: MENSAGEM APAGADA" << endl;
+			else
+				cout << "ERRO: MENSAGEM INEXISTENTE" << endl;
 		}
 	}
 	myfile.close();
