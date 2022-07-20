@@ -51,12 +51,12 @@ int* GetIndicesConsulta(string message) {
 	return valores;
 }
 
-int main() {
+int main(int argc, char** argv) {
 	string line;
 	ifstream myfile;
 	int u = 0, e = 0, n = 0, m = 0;
 
-	myfile.open("entrada_1.txt");
+	myfile.open(argv[1]);
 	myfile >> m;
 	getline(myfile, line);
 	HashTable* hash = new HashTable(m);
