@@ -66,12 +66,13 @@ int main(int argc, char** argv) {
 			Email* email = GetEmailFromString(line, m);
 			BinaryTree* arvore = hash->Pesquisa(email->GetB());
 			arvore->Insere(*email);
+			cout << "OK: MENSAGEM " + to_string(email->GetE()) + " PARA " + to_string(email->GetU()) + " ARMAZENADA EM " + to_string(email->GetB()) << endl;
 			string a = "";
 		}
 		else if (line[0] == 'C') {
 			int* valores = GetIndicesConsulta(line);
 			BinaryTree* arvore = hash->Pesquisa(valores[0] % m);
-			cout << arvore->Pesquisa(valores[1])->GetEmail()->GetMessage() << endl;
+			cout << line << ": " << arvore->Pesquisa(valores[1])->GetEmail()->GetMessage() << endl;
 		}
 		else {
 			int* valores = GetIndicesConsulta(line);
