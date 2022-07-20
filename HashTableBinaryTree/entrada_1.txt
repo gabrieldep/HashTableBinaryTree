@@ -6,7 +6,7 @@ ENTREGA 6 106 8 É um casaco longo e vermelho com bolsos?
 ENTREGA 5 107 3 Sim, este mesmo.
 ENTREGA 6 108 6 Está aqui, vou guardá-lo para você.
 ENTREGA 5 109 8 Obrigada! Vou buscá-lo no próximo sábado. Até lá!
-ENTREGA 6 110 1 Até!
+ENTREGA 6 110 1 Até! 
 CONSULTA 5 103
 CONSULTA 6 104
 CONSULTA 5 107

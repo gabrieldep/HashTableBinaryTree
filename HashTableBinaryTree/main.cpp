@@ -56,7 +56,7 @@ int main() {
 	ifstream myfile;
 	int u = 0, e = 0, n = 0, m = 0;
 
-	myfile.open("entrada_3.txt");
+	myfile.open("entrada_1.txt");
 	myfile >> m;
 	getline(myfile, line);
 	HashTable* hash = new HashTable(m);
