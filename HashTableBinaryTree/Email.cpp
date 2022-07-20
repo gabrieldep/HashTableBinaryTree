@@ -3,7 +3,7 @@
 Email::Email(int e, int u, int n, string message)
 {
 	this->e = e;
-	this->n = n;
+	this->b = n;
 	this->u = u;
 	this->message = message;
 }
@@ -17,7 +17,7 @@ Email::Email()
 {
 	this->e = -1;
 	this->u = -1;
-	this->n = -1;
+	this->b = -1;
 	this->message = "";
 }
 
@@ -30,9 +30,9 @@ void Email::SetE(int e)
 	this->e = e;
 }
 
-void Email::SetN(int n)
+void Email::SetB(int n)
 {
-	this->n = n;
+	this->b = n;
 }
 
 void Email::SetU(int u)
@@ -50,9 +50,9 @@ int Email::GetE()
 	return this->e;
 }
 
-int Email::GetN()
+int Email::GetB()
 {
-	return this->n;
+	return this->b;
 }
 
 int Email::GetU()

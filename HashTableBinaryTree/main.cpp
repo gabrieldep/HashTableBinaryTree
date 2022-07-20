@@ -26,7 +26,8 @@ Email* GetEmailFromString(string message, int m) {
 				email->SetU(stoi(palavra));
 			else if (aux == 2) {
 				email->SetE(stoi(palavra));
-				email->SetN(email->GetU() % m);
+				int u = email->GetU();
+				email->SetB(u % m);
 			}
 			aux++;
 		}
@@ -55,7 +56,7 @@ int main() {
 	ifstream myfile;
 	int u = 0, e = 0, n = 0, m = 0;
 
-	myfile.open("entrada_1.txt");
+	myfile.open("entrada_3.txt");
 	myfile >> m;
 	getline(myfile, line);
 	HashTable* hash = new HashTable(m);
@@ -63,17 +64,18 @@ int main() {
 	while (getline(myfile, line)) {
 		if (line[0] == 'E') {
 			Email* email = GetEmailFromString(line, m);
-			BinaryTree* arvore = hash->Pesquisa(email->GetN());
+			BinaryTree* arvore = hash->Pesquisa(email->GetB());
 			arvore->Insere(*email);
 			string a = "";
 		}
 		else if (line[0] == 'C') {
 			int* valores = GetIndicesConsulta(line);
-			cout << hash->Pesquisa(valores[0])->Pesquisa(valores[1])->GetEmail()->GetMessage() << endl;
+			BinaryTree* arvore = hash->Pesquisa(valores[0] % m);
+			cout << arvore->Pesquisa(valores[1])->GetEmail()->GetMessage() << endl;
 		}
 		else {
 			int* valores = GetIndicesConsulta(line);
-			hash->Pesquisa(valores[0])->Remove(valores[1]);
+			hash->Pesquisa(valores[0] % m)->Remove(valores[1]);
 		}
 	}
 	myfile.close();

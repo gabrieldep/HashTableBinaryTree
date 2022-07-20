@@ -7,7 +7,7 @@ class Email
 private:
 	int e;
 	int u;
-	int n;
+	int b;
 	string message;
 public:
 	Email(int e, int u, int n, string message);
@@ -15,11 +15,11 @@ public:
 	Email();
 	~Email();
 	void SetE(int e);
-	void SetN(int n);
+	void SetB(int n);
 	void SetU(int u);
 	void SetMessage(string message);
 	int GetE();
-	int GetN();
+	int GetB();
 	int GetU();
 	string GetMessage();
 };
